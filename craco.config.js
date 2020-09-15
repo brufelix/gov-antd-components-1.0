@@ -23,6 +23,7 @@ module.exports = {
                 '@slider-track-background-color': '#f2f2f2',
                 '@layout-header-background': "#52DF9A",
                 '@input-bg': '#00B894',
+                '@input-color': '#f2f2f2',
                 '@input-icon-color':'#52DF9A',
                 '@input-icon-hover-color': '#00B894',
                 '@input-placeholder-color': '#f2f2f2',
