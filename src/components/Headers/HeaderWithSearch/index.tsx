@@ -31,6 +31,7 @@ const styleSearch: React.CSSProperties = {
     width: '100%',
     height: '100%',
     border: 'none',
+    background: 'linear-gradient(to right, #00B894, #52DF9A)'
 }
 
 function HeaderWithSearch(): JSX.Element {
@@ -53,7 +54,7 @@ function HeaderWithSearch(): JSX.Element {
             </div>
             <div style={styleContainerSearch} >
                 <Input size="small" style={styleSearch} placeholder="Buscar serviço" />
-                <div style={{ background: '#00B894' }}>
+                <div style={{ background: '#52DF9A' }}>
                     <Button size="middle" style={{ width: 60, borderRadius: 30, border: 'none' }}
                         icon={<SearchOutlined />} loading={loading}
                         onClick={() => onClick()} />
