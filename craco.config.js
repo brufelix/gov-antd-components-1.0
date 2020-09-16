@@ -27,6 +27,8 @@ module.exports = {
                 '@input-icon-color':'#52DF9A',
                 '@input-icon-hover-color': '#00B894',
                 '@input-placeholder-color': '#f2f2f2',
+                '@table-header-bg': '#00B894',
+                '@table-header-color': '#f2f2f2',
                 '@drawer-bg': 'white',
               },
               javascriptEnabled: true,
