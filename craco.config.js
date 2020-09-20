@@ -7,7 +7,8 @@ module.exports = {
         options: {
           lessLoaderOptions: {
             lessOptions: {
-              modifyVars: { 
+              modifyVars: {
+                '@font-family': 'nunitoSans-regular',
                 '@primary-color': '#52DF9A',
                 '@link-color': '#52DF9A',
                 '@link-hover-color': '#00B894',

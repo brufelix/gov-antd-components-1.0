@@ -1,5 +1,10 @@
 @import '~antd/dist/antd.less';
 
+@font-face {
+  font-family: 'nunitoSans-regular';
+  src: url('./assets/source/nunito_Sans/NunitoSans-Regular.ttf');
+}
+
 .App {
   text-align: center;
 }
@@ -7,6 +12,12 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+// ======================= Drawer =========================================
+
+.ant-drawer-body>ul {
+  min-height: 300px;
 }
 
 // ======================= Pagination ===================================== 
