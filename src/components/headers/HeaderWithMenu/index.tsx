@@ -6,7 +6,7 @@ import Drawer from '../../drawer'
 import {
     styleContainerHeader,
     styleLink
-} from './style'
+} from './style/styleInline'
 import './style/index.less'
 
 function HeaderWithMenu(): JSX.Element {

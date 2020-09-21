@@ -1,18 +1,24 @@
 import React, { useState } from 'react'
 import { Layout, Input, Button, Image } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
+import { FaBars } from 'react-icons/fa'
 
 import {
     styleContainerSearch,
     styleHeader,
     styleLink,
     styleSearch
-} from './style'
+} from './style/styleInline'
+import './style/index.less'
 
 function HeaderWithSearch(): JSX.Element {
 
     const [loading, setLoading] = useState(false)
     const { Header } = Layout
+
+    function handleClickIcon(): void {
+        console.log("Icon")
+    }
 
     function onClick(): void {
         setLoading(!loading)
@@ -23,19 +29,29 @@ function HeaderWithSearch(): JSX.Element {
 
     return (
         <Header style={styleHeader} >
-            <div>
+            <div className="logo">
                 <Image height={60} width="auto"
                     src="https://www.ceara.gov.br/wp-content/themes/ceara2017/assets/images/logo-ceara.svg" />
             </div>
-            <div style={styleContainerSearch} >
+            <div className="bars">
+                <FaBars size={25} color="#FFFFFF" onClick={() => handleClickIcon()} />
+            </div>
+            <div className="brasao">
+                <Image height={60} width="auto" className="img"
+                    src="https://brasao.org/wp-content/uploads/2018/10/brasao-do-ceara-5.png" />
+            </div>
+            <div className="search-container" style={styleContainerSearch} >
                 <Input size="small" style={styleSearch} placeholder="Buscar serviço" />
-                <div style={{ background: '#52DF9A' }}>
-                    <Button size="middle" style={{ width: 60, borderRadius: 30, border: 'none' }}
+                <div style={{ background: 'linear-gradient(to right, #52DF9A, #FFFFFF)' }}>
+                    <Button size="middle" style={{
+                        width: 60, height: 40,
+                        borderRadius: 30, border: 'none'
+                    }}
                         icon={<SearchOutlined />} loading={loading}
                         onClick={() => onClick()} />
                 </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div className="about-links">
                 <a style={styleLink} href="/">Sobre</a>
                 <div style={{ background: 'white', height: 32, width: 1 }} />
                 <a style={styleLink} href="/">Serviços para o cidadão</a>
