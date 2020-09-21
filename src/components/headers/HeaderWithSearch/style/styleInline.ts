@@ -14,13 +14,12 @@ export const styleLink: React.CSSProperties = {
 }
 
 export const styleContainerSearch: React.CSSProperties = {
-    display: 'flex',
-    alignItems: 'center',
-    height: 32,
-    width: '26%',
+    height: 38,
+    width: '30%',
+    minWidth: '180px',
     border: 'solid 3px white',
-    borderRadius: 30,
-    overflow: 'hidden'
+    borderRadius: 40,
+    overflow: 'hidden',
 }
 
 export const styleSearch: React.CSSProperties = {
