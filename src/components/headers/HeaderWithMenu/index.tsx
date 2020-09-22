@@ -33,6 +33,7 @@ function HeaderWithMenu(): JSX.Element {
                     </Button>
                     <span>MENU</span>
                 </div>
+                <Drawer onClose={onClose} visible={visible} />
                 <div className="link-options" >
                     <a style={styleLink} href="/" >Perfil</a>
                     <a style={styleLink} href="/" >Configuração</a>
@@ -49,7 +50,6 @@ function HeaderWithMenu(): JSX.Element {
                         <FaGitlab />
                     </a>
                 </div>
-                <Drawer onClose={onClose} visible={visible} />
             </Header>
         </>
     )

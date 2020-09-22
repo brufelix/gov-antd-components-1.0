@@ -3,7 +3,7 @@ export const styleHeader: React.CSSProperties = {
     justifyContent: 'space-between',
     alignItems: 'center',
     background: 'linear-gradient(to right, #00B894, #52DF9A)',
-    height: 100
+    height: 100,
 }
 
 export const styleLink: React.CSSProperties = {

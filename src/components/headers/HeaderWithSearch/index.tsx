@@ -3,6 +3,7 @@ import { Layout, Input, Button, Image } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
 import { FaBars } from 'react-icons/fa'
 
+import Drawer from '../../drawer'
 import {
     styleContainerSearch,
     styleHeader,
@@ -13,11 +14,17 @@ import './style/index.less'
 
 function HeaderWithSearch(): JSX.Element {
 
-    const [loading, setLoading] = useState(false)
     const { Header } = Layout
+    const [loading, setLoading] = useState(false)
 
-    function handleClickIcon(): void {
-        console.log("Icon")
+    const [visible, setVisible] = useState(false)
+
+    function showDrawer(): void {
+        setVisible(true)
+    }
+
+    function onClose(): void {
+        setVisible(false)
     }
 
     function onClick(): void {
@@ -34,8 +41,9 @@ function HeaderWithSearch(): JSX.Element {
                     src="https://www.ceara.gov.br/wp-content/themes/ceara2017/assets/images/logo-ceara.svg" />
             </div>
             <div className="bars">
-                <FaBars size={25} color="#FFFFFF" onClick={() => handleClickIcon()} />
+                <FaBars size={25} color="#FFFFFF" onClick={() => showDrawer()} />
             </div>
+            <Drawer onClose={onClose} visible={visible} />
             <div className="brasao">
                 <Image height={60} width="auto" className="img"
                     src="https://brasao.org/wp-content/uploads/2018/10/brasao-do-ceara-5.png" />
